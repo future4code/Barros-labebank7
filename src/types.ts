@@ -7,7 +7,7 @@ export type AccountUser={ //usuario da conta
     cpf:string,       
     birthDate:string,
     balanceAccount: number,
-    extract: []
+    extract: any[]
 }
 
 // Transition Types //
