@@ -2,7 +2,7 @@
 
 // User Account Type //
 
-export type AccountUser={
+export type AccountUser={ //usuario da conta
     name:string,
     cpf:string,       
     birthDate:string,
@@ -12,24 +12,24 @@ export type AccountUser={
 
 // Transition Types //
 
-export type BalanceAccount={
+export type BalanceAccount={ //saldo da conta
     name:string,
     cpf:string, 
 }
 
-export type AccountValueAdd={
+export type AccountValueAdd={ //valor da conta adicionado
     name:string,
     cpf:string, 
     value: number,
 }
 
-export type Pay={
+export type Pay={ //pagar
     valuePay: number,
     descriptionPay: string,
     datePay: string,
 }
 
-export type TransferMoney={
+export type TransferMoney={ //transferencia de dinheiro
     name:string,
     cpf:string,
     recipientName: string,
