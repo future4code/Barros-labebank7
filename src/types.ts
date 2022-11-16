@@ -1,5 +1,11 @@
 // --------------------- TYPES -------------------// 
 
+export type Extract={
+    valuePay:number,
+    descriptionPay:string,
+    datePay:string,
+}
+
 // User Account Type //
 
 export type AccountUser={ //usuario da conta
@@ -7,7 +13,7 @@ export type AccountUser={ //usuario da conta
     cpf:string,       
     birthDate:string,
     balanceAccount: number,
-    extract: []
+    extract: Extract[]
 }
 
 // Transition Types //
