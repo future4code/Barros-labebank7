@@ -21,21 +21,32 @@ app.post('/users/addUser',(req:Request,res:Response)=>{
     try {
     const {userName, userCpf, userDateBirth, userBalance} = req.body
 
-    console.log(userName, userCpf, userDateBirth, userBalance)
- 
     if(!userName || !userCpf || !userDateBirth || !userBalance){
         errorCode = 422
         throw new Error("Falta passar parametros , nome, CPF, Data de Nascimento, ");
     }
-
-         const newUser : AccountUser ={
+   
+  let ageUser = userDateBirth.split('/')
+  let actual = new Date()
+  let stringDate = ageUser[1] + '-' + ageUser[0] + '-' + ageUser[2];
+  let age = new Date(stringDate);
+  let ofAge = age.setFullYear(age.getFullYear()+18)
+  console.log('Data formatada 2: ' + age);
+  console.log('Data de hoje: ' + actual);
+  
+    if(age > actual){
+        errorCode = 401
+        throw new Error("Menor de 18 anos. Usuário não autorizado!");
+    }
+ 
+  const newUser : AccountUser ={
             name : userName,
             cpf: userCpf,
             birthDate: userDateBirth,
             balanceAccount : userBalance,
             extract : []
          }
-
+              
           users.push(newUser)
 
           res.status(201).send(users)
@@ -43,6 +54,12 @@ app.post('/users/addUser',(req:Request,res:Response)=>{
     } catch (error:any) {
         res.status(errorCode).send(error.message)
     }
+
+})
+
+// Pegar todos os usuários
+app.get('/users',(req:Request,res:Response)=>{
+    res.send(users) 
 })
 
 app.listen(3003, () => {
