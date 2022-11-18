@@ -26,6 +26,8 @@ app.post('/users/addUser',(req:Request,res:Response)=>{
         throw new Error("Falta passar parametros , nome, CPF, Data de Nascimento, ");
     }
    
+// Validar usuarios maiores de 18 anos
+
   let ageUser = userDateBirth.split('/')
   let actual = new Date()
   let stringDate = ageUser[1] + '-' + ageUser[0] + '-' + ageUser[2];
