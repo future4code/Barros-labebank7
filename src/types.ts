@@ -8,7 +8,7 @@ export type Extract={
 
 // User Account Type //
 
-export type AccountUser={ //usuario da conta
+export type AccountUser={ 
     name:string,
     cpf:string,       
     birthDate:string,
@@ -18,24 +18,24 @@ export type AccountUser={ //usuario da conta
 
 // Transition Types //
 
-export type BalanceAccount={ //saldo da conta
+export type BalanceAccount={ 
     name:string,
     cpf:string, 
 }
 
-export type AccountValueAdd={ //valor da conta adicionado
+export type AccountValueAdd={ 
     name:string,
     cpf:string, 
     value: number,
 }
 
-export type Pay={ //pagar
+export type Pay={ 
     valuePay: number,
     descriptionPay: string,
     datePay: string,
 }
 
-export type TransferMoney={ //transferencia de dinheiro
+export type TransferMoney={ 
     name:string,
     cpf:string,
     recipientName: string,
