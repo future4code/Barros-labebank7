@@ -14,7 +14,7 @@ Com isso tudo em mente, você deve implementar uma POC com o objetivo de ganhar 
 ## Tecnologias
 Typescript
 
-### Funcionalidades
+## Funcionalidades
 
 - Criar Conta
     
