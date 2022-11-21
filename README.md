@@ -1,2 +1,7 @@
 # Projeto em grupo - LabeBank
-## Atenção! Personalize seu readme!
+
+
+## Integrantes
+- Ariane Lopes
+- Layla Janaína Hissa Borges
+- Samuel Garcia
